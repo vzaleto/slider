@@ -24,18 +24,18 @@
 	<style type="text/css">
 		.block{
 			margin: 0 auto;
-			    max-width: 643px;
+			max-width: 643px;
 		}
 		.slider {
 			width: 290px;
-				margin: 0 auto;
+			margin: 0 auto;
 		}
 		.item{
 			display: inline-block;
 		}
 		.buttons {
 			width: 113px;
-				margin: 0 auto;
+			margin: 0 auto;
 		}
 		.active{
 			color: red;
@@ -70,15 +70,7 @@
 
 	</style>
 
-
-
-
 	<script type="text/javascript">
-
-
-
-
-
 
 		const slider = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
 		let indexSlider = 0;
@@ -93,9 +85,6 @@
 
 			elem.onclick = function(){
 
-					// list[indexSlider].classList.remove('current');
-
-
 					prevIndex = indexSlider;
 
 					if(elem.id == 'next'){
@@ -105,16 +94,8 @@
 						indexSlider == 0 ? indexSlider = slider.length - 1 : indexSlider--;
 					}
 
-
-					sliderIndex();
-
-
-
-
-				// list[indexSlider].classList.add('current')
-				
+					sliderIndex();	
 			}
-
 
 		});
 
@@ -129,16 +110,11 @@
 
 		list[0].classList.add('current');
 
-
 		list.forEach(function(elem,index){
-
-			
 
 			elem.onclick = function(){
 				prevIndex = indexSlider;
 				indexSlider = index;  
-
-				// removeClass(elem)
 
 				sliderIndex();
 
@@ -151,12 +127,9 @@
 			list[prevIndex].classList.remove('current');
 			list[indexSlider].classList.add('current')
 
-			 // removeClass (list[indexSlider])
-
 			 img.setAttribute('src', 'images/' + slider[indexSlider]);
 
 			}
-
 
 			function removeClass (current){
 
@@ -169,195 +142,6 @@
 					}
 				});
 			}
-
-
-
-
-		// const sliders = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
-
-		// let sliderIndex = 0;
-
-		// let image = document.querySelector('.imagein');
-		// let item = document.querySelector('.item');
-		// let btn = document.querySelectorAll('button');
-
-		// let next = document.querySelector('#next');
-		// let prev = document.querySelector('#prev');
-
-
-
-		// btn.forEach(function(elem){
-
-		// 	elem.onclick = function(){
-
-		// 		prevIndex = sliderIndex;
-
-		// 		if (elem.id == 'next') {
-
-		// 			sliderIndex == sliders.length - 1 ? sliderIndex = 0 : sliderIndex++;
-
-		// 		}else{
-		// 			sliderIndex == 0 ? sliderIndex = sliders.length -1 : sliderIndex--;
-		// 		}
-
-		// 		renderSlide()
-
-		// 	}
-
-		// });
-
-
-
-		// for( i = 0; i < sliders.length ; i++){
-
-		// 	item.innerHTML += `<div class='list' >${[i]}</div>`;
-
-		// }
-		
-		// let list = document.querySelectorAll('.list');
-
-		// list[0].classList.add('current');
-
-
-		// let prevIndex = 0;
-
-		// list.forEach(function(elem,index){
-
-		// 	elem.onclick = function(){
-
-
-		// 		// image.setAttribute('src', 'images/' + sliders[index])
-
-		// 		prevIndex = sliderIndex;
-
-		// 		sliderIndex = index;
-		// 		renderSlide();
-
-		// 	}
-
-		// });
-
-
-		// function renderSlide()
-		// {
-		// 	console.log('render');
-
-		// 	list[prevIndex].classList.remove('current');
-		// 	list[sliderIndex].classList.add('current');
-
-		// 	// cheskDotts(list[sliderIndex]);
-
-
-		// 	image.setAttribute('src','images/' + sliders[sliderIndex])
-		// }
-
-
-		// function cheskDotts(current){
-
-		// 	list.forEach(function(elem){
-
-		// 		if(elem !== current){
-
-		// 			elem.classList.remove('current')
-
-		// 		}
-
-
-		// 	})
-
-		// };
-
-
-
-
-		
-
-
-		// const images = ['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg'];
-
-		// let img = document.querySelector('.imagein');
-		// console.log(img)
-
-
-		// let item = document.querySelectorAll('.item');
-		// let next = document.getElementById('next');
-		// let prev = document.getElementById('prev');
-
-		// next.addEventListener('click', ClickNext);
-		// prev.addEventListener('click', ClickPrev);
-		// next.addEventListener('click', ClickNextImg);
-		// prev.addEventListener('click', ClickPrevImg);
-
-		// let index = 0;
-
-		// function ClickNext () {
-
-		// 	item[index].classList.remove('active');
-
-		// 	if(index ==  item.length-1){
-
-		// 		index = 0;
-		// 	}
-		// 	else{
-
-		// 		index++;
-		// 	} 
-
-		// 	item[index].classList.add('active');
-		// };
-
-
-		// function ClickPrev () {
-
-		// 	item[index].classList.remove('active');
-
-		// 	if(index ==  0){
-
-		// 		index = item.length-1;
-		// 	}
-		// 	else{
-
-		// 		index--;
-		// 	} 
-
-		// 	item[index].classList.add('active');
-		// }
-
-
-
-		// let	indexi = 0;
-
-		// function ClickNextImg(){
-
-
-		// 	if(indexi == images.length-1){
-
-		// 		indexi = 0
-
-		// 	}else{
-
-		// 		indexi++;
-
-		// 	}
-		// 	img.setAttribute('src',  'images/' + images[indexi] )
-
-		// }
-
-		// function ClickPrevImg(){
-
-
-		// 	if(indexi == 0){
-		// 		indexi = images.length-1
-
-		// 	}else{
-		// 		indexi--;
-
-		// 	}
-		// 	img.setAttribute('src',  'images/' + images[indexi] )
-
-		// }
-
-
 
 	</script>	
 
